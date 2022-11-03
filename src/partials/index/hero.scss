@@ -1,0 +1,39 @@
+.hero {
+  position: relative;
+  padding-top: rem(50px);
+  padding-bottom: rem(100px);
+  background-image: url("../images/hero-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__content {
+    max-width: rem(550px);
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: em(20px, 60px);
+    font-weight: 600;
+    font-size: rem(60px);
+    line-height: 120%;
+    letter-spacing: 0.02em;
+    color: var(--black);
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: em(50px, 20px);
+    font-size: rem(20px);
+    line-height: 140%;
+    color: var(--dark);
+  }
+
+  &__btn {
+    display: block;
+    padding: rem(22px) rem(10px);
+    width: rem(400px);
+    font-weight: 700;
+    font-size: rem(25px);
+    line-height: 120%;
+  }
+}

@@ -38,6 +38,9 @@
 
   &__btn {
     display: block;
+    padding: rem(10px);
     width: rem(210px);
+    font-weight: 600;
+    font-size: rem(18px);
   }
 }
