@@ -1,0 +1,24 @@
+mixin style(path)
+  link(rel="stylesheet", href=path)
+
+mixin script(path)
+  script(src=path, defer)
+
+mixin icon(id)
+  svg&attributes(attributes) 
+    use(xlink:href=`images/sprite.svg#${id}`)
+
+mixin img(file, alt)
+  - const [fileName, ext] = file.split(".")
+
+  if !config.isProd
+    img(class="lazy" data-src=`images/${file}` src="images/placeholder.png" alt=alt)&attributes(attributes)
+  
+  else if ext === "svg"
+    img(class="lazy" data-src=`images/svg/${file}` src="images/placeholder.png" alt=alt)&attributes(attributes)
+
+  else
+    picture 
+      source(data-srcset=`images/${fileName}.avif` srcset="images/placeholder.avif" type="image/avif")
+      source(data-srcset=`images/${fileName}.webp` srcset="images/placeholder.webp" type="image/webp")
+      img(class="lazy" data-src=`images/${file}` src="images/placeholder.png" alt=alt)&attributes(attributes)

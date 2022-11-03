@@ -1,0 +1,25 @@
+include @cmps/Head/head
+include ../_mixins
+
+doctype html
+html(lang="ru")
+  head
+
+    -
+      const page = {
+        title: "",
+      }
+  
+    block config
+      
+    +head({
+      title: page.title,
+    })
+
+    block scripts
+    
+    block styles
+
+  body 
+    .site-container
+      block partials

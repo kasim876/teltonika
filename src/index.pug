@@ -1,0 +1,17 @@
+extends layouts/page
+
+block config 
+  - page.title = "Teltonika"
+
+block styles
+  +style('styles/main.css')
+  +style('styles/index.css')
+
+block scripts
+  +script('scripts/imageTest.js')
+  +script('scripts/imageLazy.js')
+  +script('scripts/index.js')
+
+block partials 
+  include @cmps/Header/header
+  main
