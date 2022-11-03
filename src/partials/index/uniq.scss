@@ -1,0 +1,30 @@
+.uniq {
+  padding: rem(60px) 0;
+
+  &__content {
+    max-width: rem(600px);
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: em(20px, 20px);
+    font-weight: 700;
+    font-size: rem(30px);
+    line-height: 139%;
+    color: var(--primary);
+  }
+
+  &__descr {
+    margin: 0;
+    font-size: rem(20px);
+    line-height: 140%;
+
+    &:not(:last-child) {
+      margin-bottom: em(30px, 20px);
+    }
+  }
+
+  .title {
+    margin-bottom: em(50px, 50px);
+  }
+}
