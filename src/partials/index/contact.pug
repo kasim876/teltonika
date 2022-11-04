@@ -1,0 +1,25 @@
+section.contact 
+  .contact-decor(aria-hidden="true") 
+  .container 
+    form.contact__form(action="#" method="post") 
+      .contact__content 
+        h2.title Оставить заявку
+        .select.contact__input 
+          button.btn-reset.select__toggle(type="button" name="select" value="" data-select="toggle") Выбрать страну
+          .select__dropdown 
+            ul.list-reset.select__options 
+              li.select__option.select__option_selected(data-value="Украина" data-select="option") Украина
+              li.select__option(data-value="Казахстан" data-select="option") Казахстан
+              li.select__option(data-value="Россия" data-select="option") Россия
+        input.input-reset.contact__input(type="text" placeholder="Интересующий продукт" name="interest product")
+        input.input-reset.contact__input(type="text" placeholder="Название компании" name="company name")
+        label.contact__row 
+          span.contact__code +380
+          input.input-reset.contact__input.contact__input_tel(type="tel" placeholder="999 99 99" name="tel")
+        input.input-reset.contact__input(type="email" placeholder="Почта" name="email")
+        textarea.contact__input.contact__input_large(placeholder="Сообщение")
+        label.checkbox 
+          input.checkbox__input(type="checkbox")
+          span.checkbox__caption Ваши личные данные будут обрабатываться в соответствии с 
+            a(href="#") политикой конфиденциальности
+        button.btn-reset.btn.contact__btn(type="submit") Отправить
