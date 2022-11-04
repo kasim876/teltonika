@@ -1,0 +1,51 @@
+.about {
+  padding-top: rem(60px);
+  padding-bottom: rem(120px);
+  background-image: url("../images/about-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__descr {
+    margin: 0;
+    margin-bottom: em(60px, 20px);
+    max-width: rem(640px);
+    font-size: rem(20px);
+    line-height: 140%;
+    color: var(--blu);
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(20px);
+
+    /* stylelint-disable-next-line scss/selector-no-redundant-nesting-selector */
+    & .about__descr {
+      margin-bottom: 0;
+    }
+  }
+
+  &__subtitle {
+    padding-left: 55px;
+    background-position: left center;
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+
+    &_mission {
+      background-image: url("../images/svg/about-mission.svg");
+    }
+
+    &_vision {
+      background-image: url("../images/svg/about-vision.svg");
+    }
+
+    &_values {
+      background-image: url("../images/svg/about-values.svg");
+    }
+  }
+
+  .title {
+    margin-bottom: em(20px, 50px);
+    color: var(--white);
+  }
+}
