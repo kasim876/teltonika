@@ -11,12 +11,12 @@ section.hero
     .container
       ul.list-reset.hero__list.flex-container 
         li.hero-item
-          .hero-item__counter 24
+          .hero-item__counter(data-max="24") 0
           .hero-item__info 
             span.hero-item__object Года
             span.hero-item__descr В IoT бизнесе
         li.hero-item
-          .hero-item__counter 132+
+          .hero-item__counter.hero-item__counter_plus(data-max="132") 0
           .hero-item__info 
             span.hero-item__object Страны 
             span.hero-item__descr Ипользуют наши продукты
@@ -26,7 +26,7 @@ section.hero
             span.hero-item__object Продуктов
             span.hero-item__descr И более 200 бизнес-кейсов
         li.hero-item
-          .hero-item__counter 500+
+          .hero-item__counter.hero-item__counter_plus 500
           .hero-item__info 
             span.hero-item__object Сертификатов
             span.hero-item__descr Для глобального использования продукта

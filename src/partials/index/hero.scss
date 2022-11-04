@@ -48,12 +48,18 @@
   max-width: rem(350px);
 
   &__counter {
+    display: flex;
     margin-right: em(5px, 70px);
     font-family: "BebasNeue", sans-serif;
     font-size: rem(70px);
     line-height: 140px;
     letter-spacing: 0.035em;
     color: var(--white);
+
+    &_plus::after {
+      content: "+";
+      display: block;
+    }
   }
 
   &__info {
