@@ -1,0 +1,86 @@
+.footer {
+  padding: rem(55px) 0 rem(120px);
+  background-image: linear-gradient(115.17deg, #052a4c -11.28%, #004353 96.04%);
+
+  &__col {
+    max-width: rem(400px);
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: rem(40px);
+    width: rem(193px);
+    height: rem(36px);
+    background-image: url("../images/logo-footer.png");
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: rem(40px);
+    font-size: rem(16px);
+    line-height: 175%;
+    color: var(--blu);
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: em(35px, 18px);
+    font-size: rem(18px);
+    color: var(--white);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__list-item:not(:last-child) {
+    margin-bottom: em(27px, 16px);
+  }
+
+  &__link {
+    font-size: rem(16px);
+    color: var(--blu);
+  }
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+
+  &__item:not(:last-child) {
+    margin-right: 25px;
+  }
+
+  &__link {
+    display: block;
+    width: 45px;
+    height: 45px;
+    background-size: cover;
+
+    &_fb {
+      background-image: url("../images/svg/fb.svg");
+    }
+
+    &_twitter {
+      background-image: url("../images/svg/twitter.svg");
+    }
+
+    &_in {
+      background-image: url("../images/svg/in.svg");
+    }
+
+    &_yt {
+      background-image: url("../images/svg/yt.svg");
+    }
+
+    &_inst {
+      background-image: url("../images/svg/inst.svg");
+    }
+
+    &_vk {
+      background-image: url("../images/svg/vk.svg");
+    }
+  }
+}
