@@ -1,9 +1,8 @@
+@import "@cmps/Decor/decor";
+
 .hero {
   position: relative;
   padding-top: rem(50px);
-  background-image: url("../images/hero-bg.png");
-  background-size: cover;
-  background-repeat: no-repeat;
 
   &__content {
     max-width: rem(550px);
