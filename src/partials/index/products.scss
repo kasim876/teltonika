@@ -1,0 +1,143 @@
+.products {
+  padding: rem(120px) 0;
+  background-image: var(--gradient-dark);
+
+  &__descr {
+    margin: 0;
+    margin-bottom: em(60px, 22px);
+    max-width: rem(830px);
+    font-size: rem(22px);
+    line-height: 140%;
+    color: var(--white);
+  }
+
+  &__list {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__item {
+    position: relative;
+    border: 1px solid var(--white);
+    border-radius: 10px;
+    padding: rem(40px) rem(30px);
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    &_current {
+      background-image: url("../images/product-bg.jpg");
+      background-position: right top;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-color: rgba(255 255 255 / 12%);
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
+        border-radius: inherit;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0 20 38 / 62%);
+      }
+
+      .products__item-descr {
+        display: block;
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: em(10px, 34px);
+    font-weight: 600;
+    font-size: rem(34px);
+    line-height: 140%;
+    text-transform: uppercase;
+    color: var(--white);
+  }
+
+  &__item-descr {
+    display: none;
+    margin: 0;
+    margin-bottom: em(150px, 20px);
+    font-size: rem(20px);
+    line-height: 140%;
+    color: var(--blu);
+  }
+
+  &__btn {
+    display: block;
+    margin-top: em(50px, 16px);
+    border: 1px solid var(--white);
+    border-radius: 70px;
+    padding: rem(17px) 0;
+    max-width: rem(215px);
+    font-weight: 600;
+    font-size: rem(16px);
+    line-height: 120%;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--white);
+  }
+
+  .title {
+    margin-bottom: em(80px, 50px);
+    color: var(--white);
+  }
+}
+
+.products-nav {
+  position: relative;
+  display: inline-flex;
+  margin-bottom: rem(40px);
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: rgba(0 195 217 / 15%);
+  }
+
+  &__item:not(:last-child) {
+    margin-right: rem(100px);
+  }
+
+  &__btn {
+    position: relative;
+    font-weight: 600;
+    font-size: rem(34px);
+    line-height: 140%;
+    text-transform: uppercase;
+    color: var(--blu);
+
+    &_current {
+      color: var(--white);
+      pointer-events: none;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: var(--secondary);
+      }
+    }
+  }
+}
