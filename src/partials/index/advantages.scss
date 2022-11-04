@@ -1,0 +1,53 @@
+.advantages {
+  counter-reset: advantages;
+  padding: rem(120px) 0;
+
+  &__list {
+    margin-bottom: rem(10px);
+  }
+
+  &__item {
+    position: relative;
+    padding-left: rem(90px);
+    max-width: rem(350px);
+
+    &::before {
+      counter-increment: advantages;
+      content: "0" counter(advantages) ".";
+      position: absolute;
+      left: -40px;
+      top: -35px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      border: 1px solid currentcolor;
+      border-radius: 50%;
+      width: rem(107px);
+      height: rem(107px);
+      font-weight: 700;
+      font-size: rem(40px);
+      line-height: 140%;
+      color: var(--helper-blu);
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: em(10px, 30px);
+    font-size: rem(30px);
+    line-height: 140%;
+    color: var(--black);
+  }
+
+  &__descr {
+    margin: 0;
+    font-size: rem(20px);
+    line-height: 140%;
+    color: var(--dark);
+  }
+
+  .title {
+    margin-bottom: em(80px, 50px);
+    color: #000;
+  }
+}
