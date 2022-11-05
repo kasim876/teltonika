@@ -1,3 +1,5 @@
+@import "@cmps/Map/map";
+
 .advantages {
   counter-reset: advantages;
   padding: rem(120px) 0;
@@ -46,8 +48,102 @@
     color: var(--dark);
   }
 
+  &__map {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
   .title {
     margin-bottom: em(80px, 50px);
     color: #000;
+  }
+}
+
+.office {
+  position: absolute;
+  border-radius: 5px;
+  padding: rem(20px) rem(12px);
+  max-width: rem(230px);
+  box-shadow: 0 0 10px rgba(0 0 0 / 25%);
+  background-color: var(--white);
+
+  &__select {
+    position: relative;
+    display: block;
+    margin-bottom: rem(10px);
+    border-color: var(--secondary);
+    border-radius: 45px;
+    padding: 0 rem(22px);
+    width: 100%;
+    height: rem(40px);
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__placeholder-map {
+    margin-bottom: rem(15px);
+    height: rem(90px);
+    background-color: #dedede;
+  }
+
+  &__btn {
+    display: block;
+    margin: 0 auto;
+    padding: rem(13px) 0;
+    max-width: rem(130px);
+  }
+}
+
+.office-contacts {
+  margin-bottom: rem(55px);
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &_address::before {
+      background-image: url("../images/svg/location.svg");
+    }
+
+    &_tel::before {
+      background-image: url("../images/svg/call.svg");
+    }
+
+    &_email::before {
+      background-image: url("../images/svg/mail.svg");
+    }
+  }
+
+  &__item::before {
+    content: "";
+    display: block;
+    flex-shrink: 0;
+    margin-right: rem(10px);
+    width: rem(20px);
+    height: rem(20px);
+    background-size: cover;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: rem(8px);
+  }
+
+  &__inner {
+    display: block;
+    font-weight: 500;
+    font-size: rem(12px);
+    line-height: 140%;
+    color: rgba(24 24 24 / 70%);
+
+    &_link {
+      transition: color 0.25s ease-in-out;
+
+      @include hover {
+        color: #127c93;
+      }
+    }
   }
 }

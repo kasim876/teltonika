@@ -1,0 +1,89 @@
+.reletive {
+  position: relative;
+}
+
+.overflow-visible {
+  overflow: visible;
+}
+
+.marker {
+  text {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease-in-out, visibility 0.25s ease-in-out;
+  }
+
+  @include hover {
+    text {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.marker-shake {
+  transform-origin: 50% 50%;
+  animation: shake-animation 3s ease infinite;
+}
+
+.z-50 {
+  z-index: 50;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.drop-shadow-like-border {
+  filter: drop-shadow(1px 1px 1px rgb(0 0 0 / 40%));
+}
+
+.grayscale {
+  filter: grayscale(100%);
+}
+
+@keyframes shake-animation {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  10% {
+    transform: translate(10px, 0) rotate(5deg);
+  }
+
+  20% {
+    transform: translate(-10px, 0) rotate(-5deg);
+  }
+
+  30% {
+    transform: translate(10px, 0) rotate(5deg);
+  }
+
+  40% {
+    transform: translate(-10px, 0) rotate(-5deg);
+  }
+
+  50% {
+    transform: translate(10px, 0) rotate(5deg);
+  }
+
+  60% {
+    transform: translate(-10px, 0) rotate(-5deg);
+  }
+
+  70% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  80% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  90% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
