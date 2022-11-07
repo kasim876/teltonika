@@ -2,7 +2,13 @@ include @cmps/Decor/decor
 
 section.hero
   +hero-decor 
+include @cmps/Decor/decor
+
+section.hero
+  +hero-decor 
   .container
+    .flex-container
+      .hero__content
     .flex-container
       .hero__content
         h1.hero__title Готовое решение из сердца Европы
@@ -132,13 +138,17 @@ section.hero
   .hero__about
     .container
       ul.list-reset.hero__list.flex-container
+      ul.list-reset.hero__list.flex-container
         li.hero-item
           .hero-item__counter(data-max="24") 0
+          .hero-item__info
           .hero-item__info
             span.hero-item__object Года
             span.hero-item__descr В IoT бизнесе
         li.hero-item
           .hero-item__counter.hero-item__counter_plus(data-max="132") 0
+          .hero-item__info
+            span.hero-item__object Страны
           .hero-item__info
             span.hero-item__object Страны
             span.hero-item__descr Ипользуют наши продукты
