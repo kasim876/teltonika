@@ -21,3 +21,18 @@ document.querySelectorAll("[data-max]").forEach(el => {
     }
   }, speed)
 });
+
+const heroIcons = Array.from(document.querySelectorAll(".hero__icon"))
+let currentHeroIcon = heroIcons[0];
+
+setInterval(() => {
+  currentHeroIcon = heroIcons.next()
+  
+  currentHeroIcon.classList.add("animated");
+  currentHeroIcon.classList.add("jello");
+
+  setTimeout(() => {
+    currentHeroIcon.classList.remove("animated");
+    currentHeroIcon.classList.remove("jello");
+  }, 1000)
+}, 2000)
