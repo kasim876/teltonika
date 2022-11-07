@@ -29,3 +29,52 @@
     color: var(--black);
   }
 }
+
+.stages {
+  position: relative;
+  width: rem(509px);
+  height: rem(647px);
+  background-image: url("../images/svg/stages.svg");
+  background-size: cover;
+
+  &__item {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: rem(70px);
+    height: rem(70px);
+    background-color: var(--white);
+
+    &_1 {
+      left: 43%;
+      top: 1.5%;
+    }
+
+    &_2 {
+      left: 33%;
+      top: 18.8%;
+    }
+
+    &_3 {
+      left: 43%;
+      top: 35.8%;
+    }
+
+    &_4 {
+      left: 33%;
+      top: 53%;
+    }
+
+    &_5 {
+      left: 43%;
+      top: 70%;
+    }
+
+    &_6 {
+      left: 33%;
+      top: 87.3%;
+    }
+  }
+}

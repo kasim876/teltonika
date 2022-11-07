@@ -1,5 +1,9 @@
 @import "../mixins";
 
+// libs
+
+@import "../../../node_modules/aos/dist/aos";
+
 // components
 
 @import "@cmps/Header/header";
